@@ -1,4 +1,4 @@
-package io.df.tdd.service
+package io.df.tdd.c4s2.service
 
 class EmailService {
     fun sendEmail(to: String, message: String): Boolean {

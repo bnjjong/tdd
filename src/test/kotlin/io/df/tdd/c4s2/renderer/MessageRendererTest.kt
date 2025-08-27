@@ -1,4 +1,4 @@
-package io.df.tdd.renderer
+package io.df.tdd.c4s2.renderer
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows

@@ -1,4 +1,4 @@
-package io.df.tdd.service
+package io.df.tdd.c4s2.service
 
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
