@@ -8,6 +8,7 @@ import kotlin.test.assertTrue
 
 class MessageRendererTest {
 
+    
     @Test
     fun `should render message as valid HTML`() {
         // Given
