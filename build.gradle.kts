@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -35,7 +36,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("io.df.kotlin.demo.MainKt")
+    mainClass.set("io.df.amdahl.AmdahlEcommerceDemo")
 }
 
     kotlin {
