@@ -25,6 +25,8 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+    runtimeOnly("com.mysql:mysql-connector-j:8.4.0")
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 

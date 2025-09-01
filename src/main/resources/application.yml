@@ -1,0 +1,11 @@
+application:
+  id: tdd-app
+  version: 1.0
+
+spring:
+  application:
+    name: tdd-app
+  profiles:
+    active: local
+  jpa:
+    open-in-view: false # Open Session in View

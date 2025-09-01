@@ -6,10 +6,6 @@ services:
     container_name: tdd-mysql
     restart: unless-stopped
     environment:
-      # Default values can be overridden via .env or shell exports
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-tdd}
-      MYSQL_USER: ${MYSQL_USER:-tdd}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-P@ssw0rd}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-P@ssw0rd}
     ports:
       - "33061:3306"
