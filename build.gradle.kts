@@ -20,7 +20,6 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
 
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -45,11 +44,11 @@ application {
     mainClass.set("io.df.amdahl.AmdahlEcommerceDemo")
 }
 
-    kotlin {
-        compilerOptions {
-            freeCompilerArgs.addAll("-Xjsr305=strict")
-        }
+kotlin {
+    compilerOptions {
+        freeCompilerArgs.addAll("-Xjsr305=strict")
     }
+}
 
 tasks.test {
     useJUnitPlatform()
