@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: tdd-mysql
+    restart: unless-stopped
+    environment:
+      # Default values can be overridden via .env or shell exports
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-tdd}
+      MYSQL_USER: ${MYSQL_USER:-tdd}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-P@ssw0rd}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-P@ssw0rd}
+    ports:
+      - "33061:3306"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$${MYSQL_ROOT_PASSWORD} || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  db_data:
+    driver: local
